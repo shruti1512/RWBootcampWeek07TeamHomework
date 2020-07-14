@@ -16,6 +16,7 @@ struct NewPostView: View {
   @State var postText: String = ""
   @State var showImagePicker = false
   @State var uiImage: UIImage?
+  @State var image: Image?
   
   let imageSize: CGFloat = 200
   
@@ -50,9 +51,13 @@ struct NewPostView: View {
       .padding()
     }
     .sheet(isPresented: $showImagePicker) {
-      // TODO: Show ImagePicker
-      Text("Replace with code to show ImagePicker")
+      ImagePicker(image: self.$uiImage)
     }
+  }
+
+  func loadImage() {
+    guard let inputImage = uiImage else { return }
+    image = Image(uiImage: inputImage)
   }
 }
 
