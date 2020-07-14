@@ -12,7 +12,7 @@
 ## Screenshots
 
 <a name = "screenshots" />
-<img src="/Users/shrutisharma/Documents/RWBootcampHomeWork/Week05/Screenshots/1.png" width="200" height="400"> <img src="/Users/shrutisharma/Documents/RWBootcampHomeWork/Week05/Screenshots/2.png" width="200" height="400"><img src="/Users/shrutisharma/Documents/RWBootcampHomeWork/Week05/Screenshots/TextPostDraft.png" width="200" height="400"><img src="/Users/shrutisharma/Documents/RWBootcampHomeWork/Week05/Screenshots/3.png" width="200" height="400"><img src="/Users/shrutisharma/Documents/RWBootcampHomeWork/Week05/Screenshots/4.png" width="200" height="400">
+<img src="Screenshots/1.png" width="200" height="400"> <img src="Screenshots/2.png" width="200" height="400"><img src="Screenshots/3.png" width="200" height="400"><img src="Screenshots/4.png" width="200" height="400"><img src="Screenshots/5.png" width="200" height="400"> <img src="Screenshots/6.png" width="200" height="400">
 
 ## App Details
 
