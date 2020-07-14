@@ -29,7 +29,6 @@ struct PostImage: View {
     
     Image(uiImage: uiImage)
     .resizable()
-    .scaledToFit()
     .cornerRadius(5)
     .frame(width: IMAGE_WIDTH, height: IMAGE_WIDTH, alignment: .center)
   }

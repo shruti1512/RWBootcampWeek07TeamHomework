@@ -33,6 +33,7 @@ struct PostView: View {
         VStack(alignment: .leading) {
           Text(post.userName)
             .font(.custom("ArialRoundedMTBold", size: 20))
+            .foregroundColor(.blue)
           Text(post.timestamp.toString())
             .font(.custom("ArialMT", size: 15))
         }
@@ -51,21 +52,23 @@ struct PostView: View {
         Spacer()
       }
       
-      //Post Image
+      VStack {
+        //Post Image
 
-      post.uiImage != nil ?  PostImage(uiImage: post.uiImage!) : nil
+        post.uiImage != nil ? PostImage(uiImage: post.uiImage!) : nil
+                
+        //SegmentedStyle Picker View for Post Reactions
 
-      //SegmentedStyle Picker View for Post Reactions
-
-      HStack(alignment: .bottom) {
-        
-        Picker("Reaction", selection: $selectedReaction) {
-          ForEach(Reaction.allCases, id: \.self) { reaction in
-            Text(reaction.rawValue).tag(reaction)
+        HStack(alignment: .bottom) {
+          
+          Picker("Reaction", selection: $selectedReaction) {
+            ForEach(Reaction.allCases, id: \.self) { reaction in
+              Text(reaction.rawValue).tag(reaction)
+            }
           }
+          .pickerStyle(SegmentedPickerStyle())
+          .padding()
         }
-        .pickerStyle(SegmentedPickerStyle())
-        
       }
 
       }

@@ -16,7 +16,8 @@ struct PostListView: View {
 
   @ObservedObject var input = UserInput()
   @ObservedObject var postViewModel = PostViewModel()
-  
+  @Environment(\.presentationMode) var presentationMode
+
   //MARK: - State Properties
   
   @State private var searchText = ""
@@ -48,6 +49,12 @@ struct PostListView: View {
   }
   
   //MARK: - Content Body of the View
+
+  init() {
+
+      //Use this if NavigationBarTitle is with displayMode = .inline
+      UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 28)!]
+  }
 
   var body: some View {
     
@@ -99,8 +106,7 @@ struct PostListView: View {
         
 
         // Navigation Bar Items
-        
-        .navigationBarTitle("Birdie", displayMode: .inline)
+        .navigationBarTitle(Text("Birdie"), displayMode: .inline)
         .navigationBarItems(
           leading: EditButton(),
           trailing:
